@@ -7,4 +7,8 @@ class Product < ActiveRecord::Base
               with: %r{\.(gif|jpg|png)\Z}i,
               message: 'must be an URL for GIF, JPG or PNG image.'
             }
+
+  def to_s()
+    "Product: #{title}, #{price}"
+  end
 end
